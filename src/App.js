@@ -7,7 +7,7 @@ import Settings from './components/Settings/settings'
 import { useState, useEffect } from 'react';
 import useSound from 'use-sound'
 import timesUpSfx from './sounds/timesUp.mp3'
-
+import Footer from './components/Footer/footer';
 
 function App() {
   const [ settingsVisible, setSettingsVisible ] = useState(false)
@@ -25,7 +25,6 @@ function App() {
   const [ timesUp ] = useSound(timesUpSfx, {
                                 volume: volume,
                               })
-
   useEffect(() => {
     if(isActive) {
       const interval = setInterval(() => {
@@ -72,7 +71,7 @@ function App() {
 
   return (
     <div className="pomodoro-app">
-      <Header title="pomodoro" />
+      <Header title="Utsavi's pomodoro" />
       <Controls
         timerMode={timerMode}
         setTimerMode={setTimerMode}
@@ -96,23 +95,7 @@ function App() {
         volume={volume}
         setVolume={setVolume}
         />
-      <Button type="settings" toggleVisibility={toggleSettingsVisibility} />
-      <Settings visible={settingsVisible}
-                toggleSettingsVisibility={toggleSettingsVisibility} 
-                pomoLength={pomoLength}
-                setPomoLength={setPomoLength}
-                shortLength={shortLength}
-                setShortLength={setShortLength}
-                longLength={longLength}
-                setLongLength={setLongLength}
-                fontPref={fontPref}
-                setFontPref={setFontPref}
-                accentColor={accentColor}
-                setAccentColor={setAccentColor}
-                closeSettings={toggleSettingsVisibility}
-                setSecondsLeft={setSecondsLeft}
-                timerMode={timerMode}
-                />
+        <Footer/>
     </div>
   );
 }

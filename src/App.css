@@ -9,14 +9,14 @@
 }
 
 :root {
-  --accent-color: #f87070;
-  --background-body: #1e213f;
+  --accent-color: #081a8b;
+  --background-body: #e29700;
   --text: #d7e0ff;
-  --text-dark: #1e213f;
+  --text-dark: 	#97976a;
   --background-preferences: #ffffff;
   --input-background: #eff1fa;
-  --background-timer: #161932;
-  --settings-heading: #161932;
+  --background-timer: 	#4c89ff;
+  --settings-heading: 	#97976a;
   --default-accent: #f87070;
   --blue-accent: #70f3f8;
   --purple-accent: #d881f8;
@@ -35,7 +35,11 @@ body {
 body {
   display: flex;
   justify-content: center;
-  background: var(--background-body);
+  /* background: var(--background-body); */
+  background-image: url("assets/study-bg.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
 }
 
 .pomodoro-app {
@@ -52,8 +56,8 @@ h1 {
   text-align: center;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 50px;
+  line-height: 50px;
   margin-top: 32px;
 }
 
@@ -115,7 +119,7 @@ h1 {
   height: 300px;
   border-radius: 90%;
   background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+  /* box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530; */
   cursor: pointer;
 }
 
@@ -561,4 +565,21 @@ input[type="number"]::-webkit-inner-spin-button:active {
   .preferences__pane {
     top: 155px;
   }
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  height: 50px;
+  opacity: 40%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
